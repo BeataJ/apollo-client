@@ -17,4 +17,6 @@ client
   .query({
     query: getUsers,
   })
-  .then(() => {});
+  .then((response) => {
+    console.log(response.data);
+  });
