@@ -1,1 +1,20 @@
+import ApolloBoost, { gql } from 'apollo-boost';
 
+const client = new ApolloBoost({
+  uri: 'https://localhost:4000',
+});
+
+const getUsers = gql`
+  query {
+    users {
+      id
+      name
+    }
+  }
+`;
+
+client
+  .query({
+    query: getUsers,
+  })
+  .then(() => {});
