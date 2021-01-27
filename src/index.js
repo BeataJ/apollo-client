@@ -1,7 +1,7 @@
 import ApolloBoost, { gql } from 'apollo-boost';
 
 const client = new ApolloBoost({
-  uri: 'https://localhost:4000',
+  uri: 'http://localhost:4000',
 });
 
 const getUsers = gql`

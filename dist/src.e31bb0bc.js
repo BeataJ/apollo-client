@@ -34044,7 +34044,7 @@ function _templateObject() {
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var client = new _apolloBoost.default({
-  uri: 'https://localhost:4000'
+  uri: 'http://localhost:4000'
 });
 var getUsers = (0, _apolloBoost.gql)(_templateObject());
 client.query({
@@ -34080,7 +34080,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58747" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58765" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
