@@ -34050,11 +34050,7 @@ var getUsers = (0, _apolloBoost.gql)(_templateObject());
 client.query({
   query: getUsers
 }).then(function (response) {
-  var html = '';
-  response.data.users.forEach(function (user) {
-    html += "\n            <div>\n                <h3>".concat(user.name, "</h3>\n            </div>\n        ");
-  });
-  document.getElementById('users').innerHTML = html;
+  console.log(response.data);
 });
 },{"apollo-boost":"../node_modules/apollo-boost/lib/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -34084,7 +34080,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63683" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49389" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
