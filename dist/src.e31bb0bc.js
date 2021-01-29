@@ -34050,7 +34050,11 @@ var getUsers = (0, _apolloBoost.gql)(_templateObject());
 client.query({
   query: getUsers
 }).then(function (response) {
-  console.log(response.data);
+  var html = '';
+  response.data.users.forEach(function (user) {
+    html += "\n        <div>\n          <h3>".concat(user.name, "</h3>\n        </div>\n      ");
+  });
+  document.getElementById('users').innerHTML = html;
 });
 },{"apollo-boost":"../node_modules/apollo-boost/lib/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
