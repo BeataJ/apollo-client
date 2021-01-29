@@ -13,6 +13,18 @@ const getUsers = gql`
   }
 `;
 
+const getPosts = gql`
+  query {
+    posts {
+      id
+      title
+      author {
+        name
+      }
+    }
+  }
+`;
+
 client
   .query({
     query: getUsers,

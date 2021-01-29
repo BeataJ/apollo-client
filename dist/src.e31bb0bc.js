@@ -34031,6 +34031,16 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\n  query {\n    posts {\n      id\n      title\n      author {\n        name\n      }\n    }\n  }\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject() {
   var data = _taggedTemplateLiteral(["\n  query {\n    users {\n      id\n      name\n    }\n  }\n"]);
 
@@ -34047,6 +34057,7 @@ var client = new _apolloBoost.default({
   uri: 'http://localhost:4000'
 });
 var getUsers = (0, _apolloBoost.gql)(_templateObject());
+var getPosts = (0, _apolloBoost.gql)(_templateObject2());
 client.query({
   query: getUsers
 }).then(function (response) {
