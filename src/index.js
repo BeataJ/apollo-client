@@ -42,3 +42,22 @@ client
 
     document.getElementById('users').innerHTML = html;
   });
+
+client
+  .query({
+    query: getPosts,
+  })
+  .then((response) => {
+    let html = '';
+
+    response.data.posts.forEach((post) => {
+      html += `
+      <div>
+        <h3>${post.title}</h>
+        <p>${post.author.name}</p>
+      </div>
+    `;
+    });
+
+    document.getElementById('posts').innerHTML = html;
+  });

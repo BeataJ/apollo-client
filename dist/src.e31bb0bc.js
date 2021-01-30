@@ -34067,6 +34067,15 @@ client.query({
   });
   document.getElementById('users').innerHTML = html;
 });
+client.query({
+  query: getPosts
+}).then(function (response) {
+  var html = '';
+  response.data.posts.forEach(function (post) {
+    html += "\n      <div>\n        <h3>".concat(post.title, "</h>\n        <p>").concat(post.author.name, "</p>\n      </div>\n    ");
+  });
+  document.getElementById('posts').innerHTML = html;
+});
 },{"apollo-boost":"../node_modules/apollo-boost/lib/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
